@@ -1,0 +1,10 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: single-pod-access
+spec:
+  accessModes:
+  - ReadWriteOncePod # Allow only a single pod to access single-writer-only.
+  resources:
+    requests:
+      storage: 1Gi
